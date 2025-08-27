@@ -23,8 +23,7 @@ def add_category():
     session = Session()
     try:
         name = input("Enter category name: ").strip()
-        desc = input("Enter category description: ").strip()
-        c = Category(name=name, description=desc)
+        c = Category(name=name)   # ✅ description removed
         session.add(c)
         session.commit()
         print(" Category added successfully.")
